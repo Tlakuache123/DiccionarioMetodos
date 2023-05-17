@@ -8,6 +8,22 @@ st.set_page_config(page_title="Casi Newton", page_icon="🍏")
 
 st.write("# Casi Newton")
 
+st.write(
+    r"""
+Sea $f:R^n\rightarrow R$ la forma general de los métodos cuasi-newton es:
+
+$x_{k+1}=x_k-(\alpha)_k*B^{-1}_k\bigtriangledown f(x_k)$
+
+Donde: $\alpha$ es un parametro de busqueda de línea y $B_k$ es la aproximacion del Hessiano.
+
+_Nota:_
+
+- En optimizacion, la estrategia de busqueda se usa en los enfoques iterativos basicos para encontrar un minimo local.
+- Lo que hace es encontrar una direccion de descenso y luego calcula un tamaño de pasos.
+- Determina que tan lejos debe moverse $x$ en esta direccion.
+"""
+)
+
 # Ejemplo
 ## Text
 
