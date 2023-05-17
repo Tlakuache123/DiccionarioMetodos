@@ -7,6 +7,40 @@ st.set_page_config(page_title="Newton", page_icon="🍎")
 
 st.write("# Newton")
 
+st.write(
+    r"""
+## Metodo Newton-Multivariable
+$f:D\subseteq R^n \rightarrow R^n$ que sea de clase $C^{(2)}$ y continua.
+
+$Jf(x)=\{ \frac{df_i}{dx_i}\}^n_{i=1}\in Mat_{n\times n}(R)$
+
+$Hf(x)=\{ \frac{d^2f_i}{dx_jdx_i}\}^n_{i*j=1}$
+
+El teorema de la funcion inversa, nos dice que bajo hipotesis sobre
+
+$f:$\{Inyectiva, Inversa Diferenciable\}, $f:D\subseteq R^n \rightarrow R^n$, $D\leftrightarrow f^{-1}:f^{-1}$
+
+$D$ y $Df$ son conjuntos abiertos.
+
+Si llamamos a $y=f(x)$, entonces:
+
+$det$ $Jf(x) \neq 0$(la jacobiana es invertible) y $Jf(x)^{-1}(y)=\{ \frac{df_i}{dx_i}(y)\}^{-1}$
+
+## Metodo Newton
+Para sistemas de ecuaciones no líneales es el sig:
+
+$x^{(k)}=x^{(k-1)}-Jf^{-1}(y^{(k-1)})f(x^{(k-n)})$
+
+### Forma Recursiva
+
+Basta dar condiciones iniciales.
+
+$x^{(0)}=(x_1^{(0)}, x_2^{(0)},...,x_n^{(0)})$
+
+**Teorema**: Si un sistema de ecuaciones no-líneales tiene una cantidad inicial(suficientemente cerca de la solución $f(x)=0$), entonces la convergencia en el método de Newton es de tipo cuadratica.
+"""
+)
+
 # Ejemplo
 ## Text
 st.write(
