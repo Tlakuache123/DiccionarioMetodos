@@ -5,7 +5,7 @@ from sympy import lambdify
 
 st.set_page_config(page_title="Newton", page_icon="🍎")
 
-st.write("# Newton")
+st.write("# Newton 🍎")
 
 st.write(
     r"""
@@ -41,8 +41,42 @@ $x^{(0)}=(x_1^{(0)}, x_2^{(0)},...,x_n^{(0)})$
 """
 )
 
+st.write(
+    """
+    # Aplicaciones
+    - Simulacion de procesos químicos
+    - Optimizacion (minimos - maximos)
+"""
+)
+
 # Ejemplo
 ## Text
+st.write("# Codigo")
+
+st.code(
+    """
+    def newton(
+    ecuaciones: list, symbols: list, x_0: np.array, max_iter=100, error=0.000001
+):
+    system = sp.Matrix(ecuaciones)
+    jaco = system.jacobian(symbols)
+    jaco_inv = jaco.inv()
+
+    lamb_system = lambdify([symbols], system, modules=["numpy"])
+    lamb_jaco = lambdify([symbols], jaco_inv, modules=["numpy"])
+
+    for i in range(max_iter):
+        delta = np.matmul(lamb_jaco(x_0), lamb_system(x_0))
+        x_n = x_0.reshape(delta.shape) - delta
+
+        # Check error
+        if np.abs(np.linalg.norm(x_n - x_0.reshape(x_n.shape))) <= error:
+            break
+        x_0 = x_n.reshape(x_0.shape)
+    return x_0
+"""
+)
+
 st.write(
     """
 # Ejemplo

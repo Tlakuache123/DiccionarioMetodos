@@ -1,4 +1,7 @@
 import streamlit as st
+from PIL import Image
+
+image = Image.open("./assets/kirby_nerd.jpg")
 
 st.markdown(
     """
@@ -14,8 +17,11 @@ st.markdown(
 ## Temas:
 - Newton
 - Casi-Newton
+- Gradiente 
 """
 )
+
+st.image(image, caption="Nosotros comprendiendo Newton", width=240)
 
 # Texto que aparece en la barra lateral
 st.sidebar.markdown(
