@@ -49,10 +49,10 @@ puntos = []
 h = (b - a) / (n * 2)
 fx = sp.sin(x) ** 2
 
-st.latex(r"f(x) = \sin(x)^2")
+st.latex(r"\int_{0}^{\pi} \sin(x)^2 dx")
 st.write("Evaluando la integral de forma directa usando sympy")
 result = sp.integrate(fx, (x, a, b))
-st.latex(r"\int_{0}^{\pi} \sin(x)^2 dx = " + str(result))
+st.write(result)
 
 st.write("### Obteniendo la integral por medio del trapecio")
 
