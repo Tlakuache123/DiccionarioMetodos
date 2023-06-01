@@ -3,6 +3,15 @@ import sympy as sp
 
 st.write(r"# Simpson $\frac{3}{8}$")
 
+st.write(
+    r"""
+$\frac{3}{8}$ Simpson, para $n$ = impar
+\vspace{0.5cm}
+
+$\int_a^b f(x)dx\approx \frac{3h}{8} \sum_{j=1}^{\frac{n}{3}}\{f(x_{3j-3})+3f(x_{3j-1})+f(x_j)\}$
+"""
+)
+
 st.write("# Codigo")
 
 st.code(

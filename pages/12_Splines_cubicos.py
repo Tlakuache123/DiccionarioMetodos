@@ -7,6 +7,112 @@ import plotly.graph_objects as go
 
 st.title("Splines Cubicos")
 
+st.write(
+    r"""
+##  Método de Interpolacion(Splines Cubicos)
+(Hipotesis $Dom(f)$ sea cerrado y acotado).
+
+
+ Debe ser continua sobre su dominio y que sea acotada.
+ 
+
+ $Etiquetas_{(Puntos Prescritos)} {y_1,....,y_n}$
+ 
+
+ Particion sobre cada $y$
+
+ ${a=x_1, x_2, x_3,..., x_n=b}$
+
+
+Lo que estamos dando es una coleccion finita de datos.
+
+
+${(x_i, y_i)}_{i=0^n}$ Así generamos $(n_1)$ Splines Cubicos.
+
+
+Si $i=1,...,n-1 \in P_3(R) \forall i=1,...,n-1$
+\newpage
+
+$S_i(x)=a_i x^3 + b_i x^2 + c_i x + d_i$
+
+
+Condiciones:
+
+$S_1(x_1) \neq S_1(x_2)$
+
+$S_2(x_2) \neq S_2(x_3)$
+
+$S_i(x_i) \neq S_i(x_{i+1})$ con $i=1,....,n-1$
+
+$S_i(x_i)=y_i$
+
+$S_i(x_{i+1})=y_{i+1}$
+
+
+Nota: El join de los $S_i$ debe ser suave(Diferenciable).
+
+
+$(2)$ $(S'_i(x_{i+1})=S'_{i+1}(x_{i+1})$ con $i=1,....,n-2)_{ecuaciones totales}$
+
+$2(n-1)+(n-2) = (3n-4)$-ecuaciones.
+
+
+$(3)$ ${S''_i(x_{i+1})=S''_{i+1}(x_{i+1})}$ con $(i=1,....,n-2)_{ecuacuiones totales}$
+
+
+$(4n-6)$-ecuaciones
+
+
+$S''_i(x_1)=0$ $S''_n(x_n)=0$
+
+
+Para $n=4$
+
+
+$S_1(x_1)=a_1 x_1^3+b_1 x_1^2+c_1 x_1+d_1 = y_1$
+
+$S_2(x_2)=a_1 x_2^3+b_1 x_2^2+c_1 x_2+d_1 = y_2$
+
+$S_3(x_3)=a_1 x_3^3+b_1 x_3^2+c_1 x_3+d_1 = y_3$
+
+
+$S_1(x_2)=a_1 x_2^3+b_1 x_2^2+c_1 x_2+d_1 = y_2$
+
+$S_2(x_3)=a_2 x_3^3+b_2 x_3^2+c_2 x_3+d_2 = y_3$
+
+$S_3(x_4)=a_3 x_4^3+b_3 x_4^2+c_3 x_4+d_3 = y_4$
+
+
+$S'_1(x_1)=3a_1 x_1^2+2b_1 x_1+c_1 = 0$
+
+$S'_2(x_2)=3a_2 x_2^2+2b_2 x_2+c_2 = 1$
+
+$S'_3(x_3)=3a_3 x_3^2+2b_3 x_3+c_3 = 0$
+
+
+$S'_1(x_2)=3a_1 x_2^2+2b_1 x_2+c_1 = 1$
+
+$S'_2(x_3)=3a_2 x_3^2+2b_2 x_3+c_2 = 1$
+
+$S'_3(x_4)=3a_3 x_3^2+2b_3 x_3+c_3 = 1$
+
+
+$S''_1(x_1)=6a_1 x_1+2b_1 = 1$
+
+$S''_2(x_2)=6a_2 x_2+2b_2 = 1$
+
+$S''_3(x_3)=6a_3 x_3+2b_3 = 1$
+
+
+$S''_1(x_2)=6a_1 x_2+2b_1 = 1$
+
+$S''_2(x_3)=6a_2 x_3+2b_2 = 1$
+
+$S''_3(x_4)=6a_3 x_4+2b_3 = 0$
+
+"""
+)
+
 st.write("# Ejemplo")
 
 
