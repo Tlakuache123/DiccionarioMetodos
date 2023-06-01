@@ -13,6 +13,7 @@ st.markdown(
 ## Integrantes:
 - Araujo Palestina Claudio Hassiel
 - Hernández Rodríguez Alejandro
+- Torreblanca Cespedes Aldo E
 
 ## Temas:
 - Newton
@@ -31,5 +32,6 @@ st.sidebar.markdown(
 **Proyecto final de metodos numericos 2**
 - Araujo Palestina Claudio Hassiel
 - Hernández Rodríguez Alejandro
+- Torreblanca Cespedes Aldo E
 """
 )

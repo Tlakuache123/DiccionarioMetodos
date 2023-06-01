@@ -5,6 +5,34 @@ import pandas as pd
 
 st.markdown("# Trapecio")
 
+st.write(
+    r"""
+
+### La regla del Trapecio aproxima la integral:
+
+
+$\int_{x_i}^{x_{i+1}f(x)dx}$
+
+
+$\parallel f(x)- P(x)\parallel_{\infty}^{n\rightarrow \infty}$
+
+
+$\lim_{n\rightarrow \infty} \parallel P(x)\parallel = f(x)$
+
+
+Si tenemos la partición equidistante $\{a=x_0, x_1, x_2,...,x_n=b\}$, $x_i = a+\frac{b-a}{n} i$ para $i=0,1,...,n$.
+
+
+$d(x_0, x_1)=d(x_i, x_j), \forall i\neq j$, $\frac{b-a}{n}$
+
+
+Por el area del trapecio.
+
+
+$\int_a^bf(x)dx \approx \frac{b-a}{2n} \{f(x_0)+2f(x_1)+2f(x_3)+f(x_n)\}$
+"""
+)
+
 st.write("# Codigo")
 
 st.code(
