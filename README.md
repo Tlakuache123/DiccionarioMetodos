@@ -14,7 +14,4 @@ Creacion de un diccionario con los temas vistos en la materia creado en **Python
 **Integrantes:**
 - Araujo Palestina Claudio Hassiel
 - Hernández Rodríguez Alejandro
-
-**Temas:**
-- Newton :apple:
-- Casi-Newton :green_apple:
+- Torreblanca Cespedes Aldo E
